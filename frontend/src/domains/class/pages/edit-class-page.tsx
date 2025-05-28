@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useParams } from 'react-router-dom';
-import { Grid2 } from '@mui/material';
+import { Grid } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
@@ -44,8 +44,8 @@ export const EditClass = () => {
   }
 
   return (
-    <Grid2 container>
-      <Grid2 size={{ xs: 12, md: 4 }}>{content}</Grid2>
-    </Grid2>
+    <Grid container>
+      <Grid size={{ xs: 12, md: 4 }}>{content}</Grid>
+    </Grid>
   );
 };

@@ -3,7 +3,7 @@ import {
   Box,
   FormControl,
   FormHelperText,
-  Grid2,
+  Grid,
   InputLabel,
   MenuItem,
   Paper,
@@ -36,8 +36,8 @@ export const FilterStaff: React.FC<FilterStaffProps> = ({ searchStaff, methods, 
       <Typography variant='body1' sx={{ mb: 3 }}>
         Filter Criteria
       </Typography>
-      <Grid2 container spacing={2}>
-        <Grid2 size={{ xs: 8, md: 4 }}>
+      <Grid container spacing={2}>
+        <Grid size={{ xs: 8, md: 4 }}>
           <FormControl fullWidth size='small' error={Boolean(errors.roleId)}>
             <InputLabel id='staff-role' shrink>
               Staff Role
@@ -65,8 +65,8 @@ export const FilterStaff: React.FC<FilterStaffProps> = ({ searchStaff, methods, 
               )}
             />
           </FormControl>
-        </Grid2>
-        <Grid2 size={{ xs: 8, md: 4 }}>
+        </Grid>
+        <Grid size={{ xs: 8, md: 4 }}>
           <TextField
             {...register('staffId')}
             error={Boolean(errors.staffId)}
@@ -76,8 +76,8 @@ export const FilterStaff: React.FC<FilterStaffProps> = ({ searchStaff, methods, 
             size='small'
             slotProps={{ inputLabel: { shrink: true } }}
           />
-        </Grid2>
-        <Grid2 size={{ xs: 8, md: 4 }}>
+        </Grid>
+        <Grid size={{ xs: 8, md: 4 }}>
           <TextField
             {...register('staffName')}
             error={Boolean(errors.staffName)}
@@ -87,8 +87,8 @@ export const FilterStaff: React.FC<FilterStaffProps> = ({ searchStaff, methods, 
             size='small'
             slotProps={{ inputLabel: { shrink: true } }}
           />
-        </Grid2>
-      </Grid2>
+        </Grid>
+      </Grid>
       <Box sx={{ display: 'flex' }}>
         <Box sx={{ marginLeft: 'auto', mt: 2 }}>
           <LoadingButton

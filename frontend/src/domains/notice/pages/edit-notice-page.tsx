@@ -59,11 +59,13 @@ export const EditNotice = () => {
       toast.error(getErrorMsg(error as FetchBaseQueryError | SerializedError).message);
     }
   };
+
   const handleRoleChange = (event: SelectChangeEvent<string | number>) => {
     const { value } = event.target;
     setSelectedRoleId(Number(value));
     methods.reset({ ...methods.getValues(), firstField: '' });
   };
+
   const handleRecipientChange = (event: SelectChangeEvent<string | number>) => {
     const { value } = event.target;
     const shouldResetFields = value === 'EV';
@@ -81,7 +83,7 @@ export const EditNotice = () => {
 
   return (
     <>
-      <PageContentHeader icon={<Edit sx={{ mr: 1 }} />} heading='Edit Notice' />
+      <PageContentHeader icon={<Edit sx={{ mr: 1 }} />} heading="Edit Notice" />
       <Box component={Paper} sx={{ padding: '20px' }}>
         <Box sx={{ width: '100%' }}>
           <NoticeForm

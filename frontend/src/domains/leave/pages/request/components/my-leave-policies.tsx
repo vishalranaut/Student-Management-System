@@ -1,4 +1,4 @@
-import { Grid2 } from '@mui/material';
+import { Grid } from '@mui/material';
 import { LeaveDetail } from '@/domains/leave/components';
 import { useLeaveRequest } from '../context/leave-request-provider';
 
@@ -16,12 +16,12 @@ export const MyLeavePolicies = () => {
   }
 
   return (
-    <Grid2 container columnSpacing={2} rowSpacing={2}>
+    <Grid container columnSpacing={2} rowSpacing={2}>
       {myLeavePolicies.map((leave) => (
-        <Grid2 size={{ xs: 12, md: 4 }} key={leave.id}>
+        <Grid size={{ xs: 12, md: 4 }} key={leave.id}>
           <LeaveDetail key={leave.id} {...leave} />
-        </Grid2>
+        </Grid>
       ))}
-    </Grid2>
+    </Grid>
   );
 };

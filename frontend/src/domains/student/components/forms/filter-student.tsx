@@ -3,7 +3,7 @@ import {
   Box,
   Button,
   FormControl,
-  Grid2,
+  Grid,
   InputLabel,
   MenuItem,
   Paper,
@@ -43,8 +43,8 @@ export const FilterStudent: React.FC<FilterStudentProps> = ({ methods, searchStu
       <Typography variant='body1' sx={{ mb: 3 }}>
         Filter Criteria
       </Typography>
-      <Grid2 container spacing={2}>
-        <Grid2 size={{ xs: 8, md: 3 }}>
+      <Grid container spacing={2}>
+        <Grid size={{ xs: 8, md: 3 }}>
           <FormControl fullWidth size='small'>
             <InputLabel id='student-class-select'>Class</InputLabel>
             <Controller
@@ -70,8 +70,8 @@ export const FilterStudent: React.FC<FilterStudentProps> = ({ methods, searchStu
               )}
             />
           </FormControl>
-        </Grid2>
-        <Grid2 size={{ xs: 8, md: 3 }}>
+        </Grid>
+        <Grid size={{ xs: 8, md: 3 }}>
           <FormControl fullWidth size='small'>
             <InputLabel id='student-section-select'>Section</InputLabel>
             <Controller
@@ -94,8 +94,8 @@ export const FilterStudent: React.FC<FilterStudentProps> = ({ methods, searchStu
               )}
             />
           </FormControl>
-        </Grid2>
-        <Grid2 size={{ xs: 8, md: 3 }}>
+        </Grid>
+        <Grid size={{ xs: 8, md: 3 }}>
           <TextField
             {...register('name')}
             label='Name'
@@ -103,8 +103,8 @@ export const FilterStudent: React.FC<FilterStudentProps> = ({ methods, searchStu
             size='small'
             slotProps={{ inputLabel: { shrink: true } }}
           />
-        </Grid2>
-        <Grid2 size={{ xs: 8, md: 3 }}>
+        </Grid>
+        <Grid size={{ xs: 8, md: 3 }}>
           <TextField
             {...register('roll')}
             label='Roll'
@@ -112,8 +112,8 @@ export const FilterStudent: React.FC<FilterStudentProps> = ({ methods, searchStu
             size='small'
             slotProps={{ inputLabel: { shrink: true } }}
           />
-        </Grid2>
-      </Grid2>
+        </Grid>
+      </Grid>
       <Box sx={{ display: 'flex' }}>
         <Box sx={{ marginLeft: 'auto', mt: 2 }}>
           <Button

@@ -3,7 +3,7 @@ import {
   Box,
   Card,
   CardContent,
-  Grid2,
+  Grid,
   IconButton,
   Menu,
   MenuItem,
@@ -75,9 +75,9 @@ export const ListRoles = () => {
   const { anchorElement, status: currentRoleStatus, action, modalTitleText, name, id } = state;
   return (
     <>
-      <Grid2 container spacing={3}>
+      <Grid container spacing={3}>
         {roles.map(({ id, name, status, usersAssociated }) => (
-          <Grid2 size={{ xs: 12, md: 4 }} key={id}>
+          <Grid size={{ xs: 12, md: 4 }} key={id}>
             <Card variant='outlined'>
               <CardContent sx={{ backgroundColor: '#f3f6f999' }}>
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -124,9 +124,9 @@ export const ListRoles = () => {
                 </Typography>
               </CardContent>
             </Card>
-          </Grid2>
+          </Grid>
         ))}
-      </Grid2>
+      </Grid>
 
       {action === 'edit' && (
         <AddEditRole

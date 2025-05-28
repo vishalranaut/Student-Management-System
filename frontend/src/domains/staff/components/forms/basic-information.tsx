@@ -3,7 +3,7 @@ import {
   Box,
   FormControl,
   FormHelperText,
-  Grid2,
+  Grid,
   InputAdornment,
   InputLabel,
   MenuItem,
@@ -207,8 +207,8 @@ export const BasicInformation = () => {
             )}
           />
         </Box>
-        <Grid2 container rowSpacing={2}>
-          <Grid2 size={{ xs: 12, md: 8 }}>
+        <Grid container rowSpacing={2}>
+          <Grid size={{ xs: 12, md: 8 }}>
             <TextField
               {...register('qualification')}
               error={Boolean(errors?.qualification)}
@@ -220,8 +220,8 @@ export const BasicInformation = () => {
               size='small'
               slotProps={{ inputLabel: { shrink: true } }}
             />
-          </Grid2>
-          <Grid2 size={{ xs: 12, md: 8 }}>
+          </Grid>
+          <Grid size={{ xs: 12, md: 8 }}>
             <TextField
               {...register('experience')}
               error={Boolean(errors?.experience)}
@@ -233,8 +233,8 @@ export const BasicInformation = () => {
               size='small'
               slotProps={{ inputLabel: { shrink: true } }}
             />
-          </Grid2>
-        </Grid2>
+          </Grid>
+        </Grid>
       </Stack>
     </>
   );

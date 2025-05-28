@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Grid2 } from '@mui/material';
+import { Grid } from '@mui/material';
 import { useGetStudentDetail } from '@/domains/student/hooks/use-get-student-detail';
 import {
   MiniAvatar,
@@ -38,8 +38,8 @@ export const StudentProfile: React.FC<StudentProfileProps> = ({ id }) => {
   } = student;
 
   return (
-    <Grid2 container spacing={3}>
-      <Grid2 size={{ xs: 12, md: 5 }}>
+    <Grid container spacing={3}>
+      <Grid size={{ xs: 12, md: 5 }}>
         <MiniAvatar
           name={name}
           phone={phone}
@@ -47,8 +47,8 @@ export const StudentProfile: React.FC<StudentProfileProps> = ({ id }) => {
           selectedClass={className}
           section={section}
         />
-      </Grid2>
-      <Grid2 size={{ xs: 12, md: 7 }}>
+      </Grid>
+      <Grid size={{ xs: 12, md: 7 }}>
         <PersonalDetail
           dob={dob}
           gender={gender}
@@ -57,9 +57,9 @@ export const StudentProfile: React.FC<StudentProfileProps> = ({ id }) => {
           currentAddress={currentAddress}
           permanentAddress={permanentAddress}
         />
-      </Grid2>
-      <Grid2 size={{ xs: 12, md: 5 }}></Grid2>
-      <Grid2 size={{ xs: 12, md: 7 }}>
+      </Grid>
+      <Grid size={{ xs: 12, md: 5 }}></Grid>
+      <Grid size={{ xs: 12, md: 7 }}>
         <ParentsAndGuardianInformation
           fatherName={fatherName}
           fatherPhone={fatherPhone}
@@ -69,11 +69,11 @@ export const StudentProfile: React.FC<StudentProfileProps> = ({ id }) => {
           guardianPhone={guardianPhone}
           relationOfGuardian={relationOfGuardian}
         />
-      </Grid2>
-      <Grid2 size={{ xs: 12, md: 5 }}></Grid2>
-      <Grid2 size={{ xs: 12, md: 7 }}>
+      </Grid>
+      <Grid size={{ xs: 12, md: 5 }}></Grid>
+      <Grid size={{ xs: 12, md: 7 }}>
         <Others systemAccess={systemAccess} reporterName={reporterName} />
-      </Grid2>
-    </Grid2>
+      </Grid>
+    </Grid>
   );
 };

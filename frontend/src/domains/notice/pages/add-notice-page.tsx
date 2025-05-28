@@ -16,7 +16,7 @@ import { NoticeForm } from '../components';
 
 const initialState: NoticeFormProps = {
   title: '',
-  content: '',
+  description: '',
   status: 0,
   recipientType: 'EV',
   recipientRole: 0,
@@ -42,11 +42,13 @@ export const AddNotice = () => {
       toast.error(getErrorMsg(error as FetchBaseQueryError | SerializedError).message);
     }
   };
+
   const handleRoleChange = (event: SelectChangeEvent<string | number>) => {
     const { value } = event.target;
     setSelectedRoleId(Number(value));
     methods.reset({ ...methods.getValues(), firstField: '' });
   };
+
   const handleRecipientChange = (event: SelectChangeEvent<string | number>) => {
     const { value } = event.target;
     const shouldResetFields = value === 'EV';
@@ -58,7 +60,7 @@ export const AddNotice = () => {
 
   return (
     <>
-      <PageContentHeader icon={<AddCircleOutline sx={{ mr: 1 }} />} heading='Add New Notice' />
+      <PageContentHeader icon={<AddCircleOutline sx={{ mr: 1 }} />} heading="Add New Notice" />
       <Box component={Paper} sx={{ padding: '20px' }}>
         <Box sx={{ width: '100%' }}>
           <NoticeForm
