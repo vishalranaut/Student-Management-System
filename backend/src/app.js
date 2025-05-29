@@ -1,15 +1,20 @@
 const express = require("express");
-const cookieParser = require("cookie-parser"); 
+const cookieParser = require("cookie-parser");
 const dotenv = require("dotenv");
 dotenv.config();
 
-const { handle404Error, handleGlobalError, } = require("./middlewares");
+const cors = require("cors");
+const { handle404Error, handleGlobalError } = require("./middlewares");
 const { v1Routes } = require("./routes/v1");
-const { cors } = require("./config");
 const path = require("path");
 const app = express();
 
-app.use(cors)
+// Allow all origins and support credentials
+app.use(cors({
+  origin: (origin, callback) => callback(null, origin),
+  credentials: true
+}));
+
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(cookieParser());
