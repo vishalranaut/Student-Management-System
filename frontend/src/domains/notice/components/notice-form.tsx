@@ -48,14 +48,15 @@ export const NoticeForm: React.FC<Props> = ({
       />
     </Grid>
     <Grid size={12}>
-      <TextField
-        fullWidth
-        label="Status"
-        type="number"
-        {...register('status')}
-        error={!!errors.status}
-        helperText={errors.status?.message}
-      />
+    <TextField
+  fullWidth
+  label="Status"
+  type="number"
+  {...register('status', { valueAsNumber: true })}
+  error={!!errors.status}
+  helperText={errors.status?.message}
+/>
+
     </Grid>
     
     <Grid size={12}>
